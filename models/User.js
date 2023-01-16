@@ -9,6 +9,13 @@ const UserSchema = new Schema(
       required: true,
       trim: true,
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      // Validate the email through regular expression "REGEX"
+      match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,4})$/],
+    },
     thoughts: [
       {
         type: Schema.Types.ObjectId,
