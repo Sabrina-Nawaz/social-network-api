@@ -10,13 +10,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use(require("./routes"));
+//app.use(routes);
+
+// Log mongoose queries
+mongoose.set("debug", true);
 
 // Establishes successful connection to the PORT
 db.once("open", () => {
   app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
+    console.log(`API server running on port http://localhost:${PORT}!`);
   });
 });
-
-mongoose.connect(process);
