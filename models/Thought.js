@@ -1,6 +1,6 @@
 // Require Mongoose and Moment
 const { Schema, model, Types } = require("mongoose");
-const moment = require("moment");
+// const moment = require("moment");
 
 // Build for ReactionSchema
 const ReactionSchema = new Schema(
@@ -19,14 +19,15 @@ const ReactionSchema = new Schema(
       type: String,
       required: true,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (createdAtVal) =>
-        moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
-    },
+    // createdAt: {
+    //   type: Date,
+    //   default: Date.now,
+    //   get: (createdAtVal) =>
+    //     moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
+    // },
   },
   {
+    timestamps:true,
     toJSON: {
       getters: true,
     },
@@ -42,13 +43,13 @@ const ThoughtSchema = new Schema(
       minlength: 1,
       maxlength: 280,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      //Using Moment to format timestamp on query
-      get: (createdAtVal) =>
-        moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
-    },
+    // createdAt: {
+    //   type: Date,
+    //   default: Date.now,
+    //   //Using Moment to format timestamp on query
+    //   get: (createdAtVal) =>
+    //     moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
+    // },
     username: {
       type: String,
       required: true,
@@ -57,8 +58,9 @@ const ThoughtSchema = new Schema(
     reactions: [ReactionSchema],
   },
   {
+    timestamps:true,
     toJSON: {
-      virtuals: true,
+      virtual: true,
       getters: true,
     },
     id: false,

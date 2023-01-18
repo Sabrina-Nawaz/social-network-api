@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const db = require("./config/connection");
+const routes=require("./routes")
 
 // Establish express and the PORT
 const app = express();
@@ -8,12 +9,12 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
-//app.use(routes);
+app.use(routes);
 
 // Log mongoose queries
-mongoose.set("debug", true);
+// mongoose.set("debug", true);
 
 // Establishes successful connection to the PORT
 db.once("open", () => {
