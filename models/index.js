@@ -3,6 +3,7 @@ const User = require("./User");
 const Thought = require("./Thought");
 
 module.exports = { User, Thought };
+
 //first test is going to be create a user with username and email only
 //create several users 3 or 4**
 
