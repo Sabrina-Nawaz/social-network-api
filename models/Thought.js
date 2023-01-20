@@ -27,7 +27,7 @@ const ReactionSchema = new Schema(
     // },
   },
   {
-    timestamps:true,
+    timestamps: true,
     toJSON: {
       getters: true,
     },
@@ -51,6 +51,7 @@ const ThoughtSchema = new Schema(
     //     moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
     // },
     username: {
+      ref: "User",
       type: String,
       required: true,
     },
@@ -58,7 +59,7 @@ const ThoughtSchema = new Schema(
     reactions: [ReactionSchema],
   },
   {
-    timestamps:true,
+    timestamps: true,
     toJSON: {
       virtual: true,
       getters: true,

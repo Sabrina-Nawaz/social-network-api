@@ -38,8 +38,9 @@ const userController = {
   },
   //Update a user
   updateUser(req, res) {
+    console.log(req.params)
     User.findOneAndUpdate(
-      { _id: req.params.userId },
+      { _id: req.params.id },
       { $set: req.body },
       { runValidators: true, new: true }
     )
@@ -65,10 +66,10 @@ const userController = {
   // Add a friend by id
   addFriend(req, res) {
     console.log("You are adding a friend!");
-    console.log(req.body);
+    console.log(req.params);
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $addToSet: { friends: params.friendId } },
+      { $addToSet: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((dbUserData) =>
@@ -83,7 +84,7 @@ const userController = {
   removeFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $pull: { friends: params.friendId } },
+      { $pull: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((dbUserData) =>

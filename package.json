@@ -1,6 +1,24 @@
 {
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^6.8.3"
-  }
+    "mongoose": "^6.8.3",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sabrina-Nawaz/social-network-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sabrina-Nawaz/social-network-api/issues"
+  },
+  "homepage": "https://github.com/Sabrina-Nawaz/social-network-api#readme"
 }
