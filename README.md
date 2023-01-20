@@ -24,7 +24,14 @@ This application is a functional backend for a social network platform, utilizin
 
 As this repository is not deployed, you will need to download the files, have MongoDB installed and then enter the following commands in the terminal: `npm init -y`, `npm install express` and `npm install mongoose`. Lastly, enter the command `npm start` to initiate the server.
 
+[SocialNetworkAPI Demo.webm](https://user-images.githubusercontent.com/61954667/213720238-07274886-ef69-49a6-af62-3c5b6731e88e.webm)
+
 ## Tests
+
+![Screenshot 2023-01-20 at 9 12 55 AM](https://user-images.githubusercontent.com/61954667/213720565-a62604be-2486-41b4-bba7-645c6457493d.png)
+![Screenshot 2023-01-20 at 9 13 21 AM](https://user-images.githubusercontent.com/61954667/213720648-84e845d4-9630-49fc-b5ba-2138542d52dc.png)
+![Screenshot 2023-01-20 at 9 13 33 AM](https://user-images.githubusercontent.com/61954667/213720692-754df7b8-a8ad-4e44-bb80-f53c4186f155.png)
+![Screenshot 2023-01-20 at 9 13 45 AM](https://user-images.githubusercontent.com/61954667/213720742-52763eda-c7a4-47c0-aeea-74f01eaa2079.png)
 
 ## License
 
